@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIC Registration Form</title>
+    <link rel="shortcut icon" href="img/darklogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Baloo Bhai 2' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="spacer reglayer1"></div>
+    <div class="registration-form">
+        <div class="spacer reglayer2"></div>
+        <form name="google-sheet">
+            
+            <div class="form-icon3">
+                <img src="img/darklogo.png" id="img2" style="width:130px;" alt="logo">
+            </div>
+          
+            <h1 id="myid" style="text-align:center; font-style:Inter;">Registration</h1>
+            
+            <br>
+
+            <hr>
+            <input type="hidden" name="time" value="29 Mar 2022 - 01:29 AM">
+            <div class="form-group">
+                <input type="text" class="form-control item" id="name" name="name" placeholder="Enter your name"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control item" id="email" name="email"
+                    placeholder="Email(Make sure you write your email correctly)" required>
+            </div>
+            <select name="segment" class="browser-default custom-select form-control item" required>
+                <option selected>Your Interested Field</option>
+
+            </select>
+            <select name="department" class="browser-default custom-select form-control item" required>
+                <option selected>Department</option>
+                <option>CE</option>
+                <option>ME</option>
+                <option>AE</option>
+                <option>CSE</option>
+                <option>EECE</option>
+                <option>BME</option>
+                </option>
+                <option>NSE</option>
+                <option>IPE</option>
+                <option>NAME</option>
+                <option>PME</option>
+                <option>EWCE</option>
+                <option>Architecture</option>
+                <option>Other</option>
+            </select>
+
+            <select name="level" class="browser-default custom-select form-control item" required>
+                <option selected>Year/Level</option>
+                <option>1st year</option>
+                <option>2nd year</option>
+                <option>3rd year</option>
+                <option>4th year</option>
+                <option>Other</option>
+            </select>
+            <div class="form-group">
+                <input type="text" class="form-control item" name="studentId" id="number" placeholder="Student ID"
+                    required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" name="phonenumber" id="phnnumber" placeholder="Phone Number"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-block create-account" onclick="sheet3()">Register</button>
+            </div>
+            <div id="msg"></div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

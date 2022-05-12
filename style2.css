@@ -1,0 +1,207 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #001220;
+    overflow-x: hidden;
+}
+input{
+    position: relative;
+    z-index: 999;
+}
+select{
+    position: relative;
+    z-index: 999;
+}
+.spacer {
+    aspect-ratio: 960/300;
+    width: 102%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 3;
+    margin-top: -4%;
+}
+.reglayer1{
+    background-image: url("./reglayer.svg");
+}
+.reglayer2{
+    aspect-ratio: 900/900;
+    position: absolute;
+    width: 100%;
+    background-image: url("./reglayer2.svg");
+    z-index: 3;
+    top: 20px;
+    opacity: 0.9;
+
+}
+.registration-form{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,10%);
+	padding: 50px 0 200px 0;
+}
+
+.registration-form b{
+    font-weight: 550;
+    color: #da4906;
+}
+.bkashicon{
+    margin: -12px;
+}
+.registration-form form{
+    background-color: #fff;
+    max-width: 600px;
+    margin: auto;
+    padding: 50px 70px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.registration-form .form-icon{
+	text-align: center;
+    background-color: #cecece;
+    border-radius: 50%;
+    font-size: 40px;
+    color: white;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 100px;
+}
+
+.registration-form .item{
+	border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 8px 19px;
+}
+
+.registration-form .create-account{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #5791ff;
+    border: none;
+    color: white;
+    margin-top: 20px;
+}
+
+.registration-form .social-media{
+    max-width: 600px;
+    background-color: #fff;
+    margin: auto;
+    padding: 35px 0;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #9fadca;
+    border-top: 1px solid #dee9ff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.registration-form .social-icons{
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+
+.registration-form .social-icons a{
+    font-size: 23px;
+    margin: 0 3px;
+    color: #5691ff;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 45px;
+    display: inline-block;
+    height: 45px;
+    text-align: center;
+    background-color: #fff;
+    line-height: 45px;
+}
+
+.registration-form .social-icons a:hover{
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+@media (max-width: 576px) {
+    .registration-form form{
+        
+        padding: 50px 20px;
+    }
+
+    .registration-form .form-icon{
+        
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        line-height: 70px;
+    }
+    
+}
+
+#mydes{
+    border-radius: 20px;
+   
+}
+
+#img2{
+   position: relative;
+   z-index: 6;
+   top: 50px;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+
+#img1{
+   float: left;
+   margin-top: -40px;
+}
+
+@media only screen and (max-width: 1009px) {
+    #myid{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    .registration-form{
+    position: relative;
+    z-index: 5;
+    top: -220px;
+    left: 50%;
+    transform: translate(-50%,0%);
+    }
+    .spacer {
+        aspect-ratio: 960/900;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        z-index: 3;
+        margin-top: -4%;
+    }
+    .reglayer2{
+    aspect-ratio: 900/900;
+    position: absolute;
+    width: 100%;
+    background-image: url("./reglayer2.svg");
+    z-index: 3;
+    top: 5.8%;
+    opacity: 0.9;
+
+}
+
+}
+#myid{
+    margin-top: 40px;
+    font-size: 30px;
+    
+}
+
+
+#mynav{
+    background-color:  #5791ff;
+}
