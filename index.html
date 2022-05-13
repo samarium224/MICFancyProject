@@ -10,7 +10,6 @@
     <link rel="shortcut icon" href="img/darklogo.png">
     <link rel="stylesheet" href="style.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.2/dist/kute.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -23,7 +22,8 @@
 
 <body>
     <section class="header">
-        <div class="split left">
+        <canvas class="header-canvas"></canvas>
+        <div class="split-left">
             <div class="centered">
                 <div class="htextleft">
                     <h1>Become Member of<br> The Largest Club<br>of MIST</h1>
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div class="split right">
+        <div class="split-right">
             <div class="centered">
                 <img src="img/darklogo.png" alt="miclogo">
                 <div class="logodowntext">
@@ -47,7 +47,7 @@
         </div>
         <!-- button -->
         <div class="scrolldwnbtn">
-            <a aria-label='Scroll Down ⇣' class='h-button centered' data-text='Start' href='#'>
+            <a aria-label='Scroll Down ⇣' class='h-button centered' data-text='Start' href='#start'>
                 <span>S</span>
                 <span>c</span>
                 <span>r</span>
@@ -249,12 +249,74 @@
                 </defs>
             </svg>
 
+            <!-- for mobile device -->
+            <div class="mobilesvgsection">
+                <div class="msvgcontain">
+                    <img class="msvg" src="iconsvg/Organizing.svg" alt="">
+                    <span class="msvgh1">Organizing</span>
+                    <p>MIC organising teams work with the flow of time. Recently, we have taken the interviews of the
+                        associate members which was done successfully. We have given ideas about a new event and how to
+                        organise accurately. </p>
+                </div>
+                <div class="msvgcontain">
+                    <img class="msvg" src="iconsvg/AppandWeb.svg" alt="">
+                    <span class="msvgh1">App and Web Development</span>
+                    <p>MIC App and Web Development department develops and maintains apps, websites and chatbots. This
+                        department also offers various technical courses related to programming languages, app and web
+                        development. </p>
+                </div>
+                <div class="msvgcontain">
+                    <img class="msvg" src="iconsvg/Industrial_coll.svg" alt="">
+                    <span class="msvgh1">Industrial Collaboration & HR</span>
+                    <p>We are in charge of managing collaboration with other club and partnering with them. We  gather and keep data of vital information of our club. </p>
+                </div>
+                <div class="msvgcontain">
+                    <img class="msvg" src="iconsvg/Marketing.svg" alt="">
+                    <span class="msvgh1">Marketing</span>
+                    <p>"Words are powerful. 
+                        We the Marketing team play with words to uphold the Club's stature. 
+                        We are here to communicate in the most effective way. We network, talk, and convince people for the collective purpose of the club."</p>
+                </div>
+                <div class="msvgcontain">
+                    <img class="msvg" src="iconsvg/Soft_skills.svg" alt="">
+                    <span class="msvgh1">Soft Skills</span>
+                    <p>Soft Skills improve employability,adaptability which ensures survival at the modern workplace even in high-tech environments and also allow our hard skills to shine</p>
+                </div>
+                <div class="msvgcontain">
+                    <img class="msvg" style="margin-bottom: 20px;" src="iconsvg/Machine_Learning.svg" alt="">
+                    <span class="msvgh1">Machine Learning & Image Processing</span>
+                    <p>Extremely Motivated and willing to learn all the new aspects of AI  and contribute to both the club and global knowledge with help of it </p>
+                </div>
+                <div class="msvgcontain">
+                    <img class="msvg" src="iconsvg/CreativeDesign.svg" alt="">
+                    <span class="msvgh1">Creative Design</span>
+                    <p>Basically we de any kind of design for this club. From digital to printing items like posters, banners etc all are done by this team and also co operate with other teams.</p>
+                </div>
+                <div class="msvgcontain">
+                    <img class="msvg" src="iconsvg/Microcontroller.svg" alt="">
+                    <span class="msvgh1">Micro Controller and Interfacing</span>
+                    <p>Innovation the name itself describe our work in this club. We try to find innovative ideas and try to make them reality with the help of amazing micro elements.</p>
+                </div>
+                <div class="msvgcontain">
+                    <img class="msvg" src="iconsvg/Video_Editing.svg" alt="">
+                    <span class="msvgh1">Video Editing</span>
+                    <p>Though it is a very demandable department but the manpower is too short. With this team we are going forward.We prepare videos for different activities of the club and thus contribute to it</p>
+                </div>
+                <div class="msvgcontain">
+                    <img class="msvg" src="iconsvg/Research.svg" alt="">
+                    <span class="msvgh1">Research & Development</span>
+                    <p>Aspiring members here work to develop projects and offer new innovative ideas to the club having a sufficient knowledge about microcontrollers, modeling & soft skills.</p>
+                </div>
+
+
+            </div>
+
         </div>
 
     </section>
     <div class="spacer layer2"></div>
 
-    <section class="blue">
+    <section class="blue" id="start">
         <div class="blobtext">
             <h2>So Whar Are You <br> Waiting For?</h2>
             <h1>Join Us Now</h1>
@@ -295,9 +357,8 @@
     </section>
     <!-- ----- Footer ----- -->
     <footer>
+        <canvas class="footer-canvas"></canvas>
         <div class="footerbody">
-
-
             <div class="waves">
                 <div class="wave" id="wave1"></div>
                 <div class="wave" id="wave2"></div>
@@ -332,7 +393,9 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!-- javaScripts -->
-    <script src="sketch.js"></script>
+    <script src="canvas.js"></script>
+    <script src="canvas-footer.js"></script>
+    
     <script>
         const tween = KUTE.fromTo(
             '#blob1', {
