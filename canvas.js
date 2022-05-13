@@ -1,7 +1,8 @@
 let headerCanvas = document.querySelector(".header-canvas");
+let headerParent = document.querySelector(".header");
 
-let windowHeight = window.innerHeight - 100;
-let windowWidth = window.innerWidth;
+let windowHeight = headerParent.clientHeight - 100;
+let windowWidth = headerParent.clientWidth;
 
 headerCanvas.width = windowWidth;
 headerCanvas.height = windowHeight;

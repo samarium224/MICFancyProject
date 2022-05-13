@@ -4,44 +4,11 @@ body{
     background-color: #001220;
     overflow-x: hidden;
 }
-input{
-    position: relative;
-    z-index: 999;
-}
-select{
-    position: relative;
-    z-index: 999;
-}
-.spacer {
-    aspect-ratio: 960/300;
-    width: 102%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    z-index: 3;
-    margin-top: -4%;
-}
-.reglayer1{
-    background-image: url("./reglayer.svg");
-}
-.reglayer2{
-    aspect-ratio: 900/900;
-    position: absolute;
-    width: 100%;
-    background-image: url("./reglayer2.svg");
-    z-index: 3;
-    top: 20px;
-    opacity: 0.9;
 
-}
+
 .registration-form{
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,10%);
-	padding: 50px 0 200px 0;
+    
+	padding: 80px 0 200px 0;
 }
 
 .registration-form b{
@@ -158,7 +125,8 @@ select{
 
 #img1{
    float: left;
-   margin-top: -40px;
+   margin-top: -15px;
+   left: 0;
 }
 
 @media only screen and (max-width: 1009px) {
@@ -166,33 +134,12 @@ select{
         margin-top: 30px;
         font-size: 20px;
     }
-    .registration-form{
-    position: relative;
-    z-index: 5;
-    top: -220px;
-    left: 50%;
-    transform: translate(-50%,0%);
-    }
-    .spacer {
-        aspect-ratio: 960/900;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        z-index: 3;
-        margin-top: -4%;
-    }
-    .reglayer2{
-    aspect-ratio: 900/900;
-    position: absolute;
-    width: 100%;
-    background-image: url("./reglayer2.svg");
-    z-index: 3;
-    top: 5.8%;
-    opacity: 0.9;
-
-}
+    #img1{
+        float: left;
+        margin-top: -15px;
+     }
+    
+    
 
 }
 #myid{

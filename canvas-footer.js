@@ -1,8 +1,8 @@
 let footerCanvas = document.querySelector(".footer-canvas");
-let parent = document.querySelector("footer");
+let footerParent = document.querySelector("footer");
 
-footerCanvas.width = parent.clientWidth;
-footerCanvas.height = parent.clientHeight;
+footerCanvas.width = footerParent.clientWidth;
+footerCanvas.height = footerParent.clientHeight;
 
 let ctx = footerCanvas.getContext("2d");
 
