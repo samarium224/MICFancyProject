@@ -4,108 +4,218 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIC Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <title>Associate Requirement 2023</title>
     <link rel="shortcut icon" href="img/darklogo.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
         rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Baloo Bhai 2' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css">
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+
+    <style>
+        .required {
+            color: red;
+        }
+
+        .optional {
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        #valueemail-error {
+            color: rgba(255, 0, 0, 0.7);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        #submit-button {
+            border: none;
+        }
+
+        select:invalid {
+            color: rgba(0, 0, 0, 0.6)
+        }
+
+        select option {
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
-
+    <canvas class="reg-canvas" style="position: absolute; z-index: -1;"></canvas>
     <div class="registration-form">
-        
-        <form name="google-sheet">
-            
-            <div class="form-icon3">
-                <img src="img/mistlogo.png" id="img1" style="width:130px;" alt="logo">
-                <img src="img/logo.png" id="img2" style="width:150px;" alt="logo">
+
+        <form action="logic_form_reg.php" method="post">
+
+            <div class="form-icon">
+                <img src="img/registration.jpg" alt="registration-poster" , style="width: 100%;">
             </div>
-          
-            <h1 id="myid" style="text-align:center; font-style:Inter;">Registration</h1>
-            
-            <br>
+            <p class="text-secondary" style="font-size: 14px; margin-bottom: 30px;">MIST Innovation Club is recruiting
+                associate members for
+                the year 2023.Level-2
+                students, interested in
+                developing their technical skills as well as soft skills, are encouraged to apply for this once a year
+                opportunity to be a part of the most active club in MIST. <br>
+
+                Please provide your accurate information below to be considered for the interview call up. Selected
+                candidates shall be further notified about the details through their emails. <br>
+
+                Do not hesitate, it's time to innovate!
+
+            </p>
 
             <hr>
             <input type="hidden" name="time" value="29 Mar 2022 - 01:29 AM">
-            <div class="form-group">
-                <input type="text" class="form-control item" id="name" name="name" placeholder="Enter your name"
-                    required>
+            <div class="my-3">
+                <label class="labels">
+                    <h6>Name<span class="required">* </span></h6>
+                </label>
+                <input type="text" name="name" class="form-control" placeholder="Your full name" required>
+            </div>
+            <div class="my-3">
+                <label class="labels">
+                    <h6>Email<span class="required">* </span></h6>
+                </label>
+                <input type="text" name="email" class="form-control" placeholder="Your email address" required>
+            </div>
+            <div class="my-3">
+                <label class="labels">
+                    <h6>Student id<span class="required">* </span></h6>
+                </label>
+                <input type="text" name="student_id" class="form-control" placeholder="Student ID" required>
+            </div>
+
+            <div class="my-3">
+                <label class="labels">
+                    <h6>Department<span class="required">*</span></h6>
+                </label>
+                <select class="form-select mt-1" name="department" aria-label="Default select example" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option>CE</option>
+                    <option>ME</option>
+                    <option>AE</option>
+                    <option>CSE</option>
+                    <option>EECE</option>
+                    <option>BME</option>
+                    </option>
+                    <option>NSE</option>
+                    <option>IPE</option>
+                    <option>NAME</option>
+                    <option>PME</option>
+                    <option>EWCE</option>
+                    <option>Architecture</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="my-3">
+                <label class="labels">
+                    <h6>Phone number<span class="required">* </span></h6>
+                </label>
+                <input type="text" name="phonenumber" class="form-control" placeholder="Phone Number" required>
+            </div>
+
+            <div class="my-3">
+                <label class="labels">
+                    <h6>MIC department (1st choice)<span class="required">*</span></h6>
+                </label>
+                <select class="form-select mt-1" name="MICdepartment_1st" aria-label="Default select example" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option>Organizing</option>
+                    <option>App and Web Development</option>
+                    <option>Industrial Collaboration & HR</option>
+                    <option>Marketing</option>
+                    <option>Soft Skills</option>
+                    <option>Machine Learning & Micro Controller</option>
+                    <option>Creative Design</option>
+                    <option>Video Editing</option>
+                </select>
+            </div>
+
+            <div class="my-3">
+                <label class="labels">
+                    <h6>MIC department (2nd choice)<span class="required">*</span></h6>
+                </label>
+                <select class="form-select mt-1" name="MICdepartment_2nd" aria-label="Default select example" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option>Organizing</option>
+                    <option>App and Web Development</option>
+                    <option>Industrial Collaboration & HR</option>
+                    <option>Marketing</option>
+                    <option>Soft Skills</option>
+                    <option>Machine Learning & Micro Controller</option>
+                    <option>Creative Design</option>
+                    <option>Video Editing</option>
+                </select>
+            </div>
+
+            <div class="my-3">
+                <label class="labels">
+                    <h6>MIC department (3rd choice)<span class="required">*</span></h6>
+                </label>
+                <select class="form-select mt-1" name="MICdepartment_3rd" aria-label="Default select example" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option>Organizing</option>
+                    <option>App and Web Development</option>
+                    <option>Industrial Collaboration & HR</option>
+                    <option>Marketing</option>
+                    <option>Soft Skills</option>
+                    <option>Machine Learning & Micro Controller</option>
+                    <option>Creative Design</option>
+                    <option>Video Editing</option>
+                </select>
+            </div>
+            <div class="my-3">
+                <label for="completion_certificate" class="form-label">Do you have experience working on a club
+                    before?</label>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="experienced" id="completion_certificate_yes"
+                            value="yes">
+                        <label class="form-check-label" for="experienced_yes">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="experienced" id="completion_certificate_no"
+                            value="no">
+                        <label class="form-check-label" for="experienced_no">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="my-3">
+                <label for="course_title" class="form-label">Why do you want to join in this club?</label>
+                <textarea id="mytextarea" class="form-control" name="why_join"
+                    placeholder="Write a short note about why you want to join in this club"
+                    style="height: 100px"></textarea>
+            </div>
+            <div class="my-3">
+                <label for="course_title" class="form-label">Your expectation from the club </label>
+                <textarea id="mytextarea" class="form-control" name="expectation"
+                    placeholder="Your expectation from the club" style="height: 100px"></textarea>
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control item" id="email" name="email"
-                    placeholder="Email(Make sure you write your email correctly)" required>
-            </div>
-            
-            <div class="form-group">
-                <input type="text" class="form-control item" name="studentId" id="number" placeholder="Student ID"
-                    required>
-            </div>
-            <select name="department" class="browser-default custom-select form-control item" required>
-                <option selected>Department</option>
-                <option>CE</option>
-                <option>ME</option>
-                <option>AE</option>
-                <option>CSE</option>
-                <option>EECE</option>
-                <option>BME</option>
-                </option>
-                <option>NSE</option>
-                <option>IPE</option>
-                <option>NAME</option>
-                <option>PME</option>
-                <option>EWCE</option>
-                <option>Architecture</option>
-                <option>Other</option>
-            </select>
-
-            <select name="level" class="browser-default custom-select form-control item" required>
-                <option selected>Year/Level</option>
-                <option>1st year</option>
-                <option>2nd year</option>
-                <option>3rd year</option>
-                <option>4th year</option>
-                <option>Other</option>
-            </select>
-            
-            <div class="form-group">
-                <input type="text" class="form-control item" name="phonenumber" id="phnnumber" placeholder="Phone Number"
-                    required>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" name="field" id="field" placeholder="Your Interested Field"
-                    required>
-            </div>
-
-            <div class="form-group">
-                <button type="submit" class="btn btn-block create-account" onclick="sheet3()">Register</button>
+                <button type="submit" class="btn btn-block create-account" name="asso_form_submit"
+                    value="submit">Register</button>
             </div>
             <div id="msg"></div>
         </form>
 
     </div>
 
+    <script src="./canvas/reg-canvas.js"></script>
 </body>
 
 </html>
